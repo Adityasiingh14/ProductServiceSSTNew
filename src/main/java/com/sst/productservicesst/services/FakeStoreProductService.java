@@ -16,12 +16,16 @@ public class FakeStoreProductService implements ProductService {
     public Product getProductById(Long id) {
         //Call the fakeStore API to get the product with given id.
         RestTemplate restTemplate = new RestTemplate();
-        FakeStoreProductDto fakeStoreProductDto =
-                restTemplate.getForObject("https://fakestoreapi.com/products/" + id,
-                        FakeStoreProductDto.class
-                );
-        //convert FakeStoreProductDto object to Product object.
-        return convertFakeStoreProductDtoToProduct(fakeStoreProductDto);
+        throw new RuntimeException("Something went wrong in service");
+//        FakeStoreProductDto fakeStoreProductDto =
+//                restTemplate.getForObject("https://fakestoreapi.com/products/" + id,
+//                        FakeStoreProductDto.class
+//                );
+//        if(fakeStoreProductDto == null){
+//            return null;
+//        }
+//        //convert FakeStoreProductDto object to Product object.
+//        return convertFakeStoreProductDtoToProduct(fakeStoreProductDto);
     }
     public List<Product> getAllProducts(){
         RestTemplate restTemplate = new RestTemplate();
