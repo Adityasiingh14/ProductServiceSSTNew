@@ -11,4 +11,7 @@ public class ProductNotFoundException extends RuntimeException{
         super(message);
         this.id = id;
     }
+    public ProductNotFoundException(String message){
+        super(message);
+    }
 }

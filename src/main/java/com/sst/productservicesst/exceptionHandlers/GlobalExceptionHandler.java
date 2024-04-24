@@ -35,14 +35,14 @@ public class GlobalExceptionHandler {
         return response;
     }
 
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<ExceptionDto> handleGeneralException(){
-        ExceptionDto dto = new ExceptionDto();
-        dto.setMessage("Something is Wrong");
-        dto.setResolution("General Exception");
-        ResponseEntity<ExceptionDto> response = new ResponseEntity<>(dto, HttpStatus.BAD_REQUEST);
-        return response;
-    }
+//    @ExceptionHandler(Exception.class)
+//    public ResponseEntity<ExceptionDto> handleGeneralException(){
+//        ExceptionDto dto = new ExceptionDto();
+//        dto.setMessage("Something is Wrong");
+//        dto.setResolution("General Exception");
+//        ResponseEntity<ExceptionDto> response = new ResponseEntity<>(dto, HttpStatus.BAD_REQUEST);
+//        return response;
+//    }
 
 
 
